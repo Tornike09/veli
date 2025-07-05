@@ -1,0 +1,47 @@
+@import "../../colors/colors.scss";
+
+.wrapper {
+  width: 100vw;
+  height: 88px;
+  background-color: $primaryColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper > div {
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input {
+  height: 56px;
+  background-color: $whiteColor;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  width: 100%;
+  svg {
+    margin: 0 14px;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+}
+
+.navCont {
+  width: 250px;
+  justify-content: space-between;
+  display: flex;
+  margin-left: 20px;
+  p {
+    display: flex;
+    gap: 10px;
+  }
+}
