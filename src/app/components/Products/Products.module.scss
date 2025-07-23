@@ -1,0 +1,10 @@
+@import "../../colors/colors.scss";
+
+.productsCont {
+  width: 70%;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+

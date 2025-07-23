@@ -1,0 +1,33 @@
+@import "../../colors/colors.scss";
+@import "../../colors/mixins.scss";
+
+.product {
+  border: 1px solid $borderColor;
+  width: 25%;
+  div {
+    padding: 14px;
+    p {
+      display: -webkit-box;
+      @include line-clamp(3);
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      accent-color: #82b224
+      ;
+    }
+    h4 {
+      margin: 14px 0;
+    }
+  }
+  a {
+    color: $blackColor;
+  }
+}
+
+.imgCont {
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+  aspect-ratio: 1/1;
+  margin: 20px auto;
+}
