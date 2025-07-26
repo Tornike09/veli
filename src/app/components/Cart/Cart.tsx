@@ -10,20 +10,8 @@ import { decreaseQty, increaseQty, removeFromCart } from "@/app/redux/slices/car
 export const Cart = () => {
     const cartItems = useSelector((state: RootState) => state.cart)
     const sumQty = cartItems?.reduce((acc: number, item: IProduct) => acc + item.qty, 0) || 0
-    const totalPrice = cartItems?.reduce((acc: number, item: IProduct) => acc + item.price, 0) || 0
+    const totalPrice = cartItems?.reduce((acc: number, item: IProduct) => acc + item.price * item.qty, 0) || 0
     const dispatch = useDispatch()
-
-    const removeProduct = (id: number) => {
-        dispatch(removeFromCart(id))
-    }
-
-    const increaseItemQty = (id: number) => {
-        dispatch(increaseQty(id))
-    }
-
-    const decreaseItemQty = (id: number) => {
-        dispatch(decreaseQty(id))
-    }
 
     return (
         <div className={styles.wrapper}>
@@ -39,13 +27,13 @@ export const Cart = () => {
                                 </div>
                                 <div>
                                     <div className={styles.qtyCont}>
-                                        <span onClick={() => decreaseItemQty(item.id)}>-</span>
+                                        <span onClick={() => dispatch(decreaseQty(item.id))}>-</span>
                                         <p>{item.qty}</p>
-                                        <span onClick={() => increaseItemQty(item.id)}>+</span>
+                                        <span onClick={() => dispatch(increaseQty(item.id))}>+</span>
                                     </div>
                                     <h5>{item.price}$</h5>
                                 </div>
-                                <div onClick={() => removeProduct(item.id)}>
+                                <div onClick={() => dispatch(removeFromCart(item.id))}>
                                     <TrashIcon />
                                 </div>
                             </li>)
@@ -54,10 +42,10 @@ export const Cart = () => {
                     <div className={styles.totalPriceCont}>
                         <div>
                             <h3>Payment</h3>
-                            <p><span>Products({sumQty})</span><span>{totalPrice} $</span></p>
+                            <p><span>Products({sumQty})</span><span>{totalPrice.toFixed(2)} $</span></p>
                             <p><span>Delivery Fee</span><span>0.00 $</span></p>
                             <hr></hr>
-                            <h4><span>Total Price</span><span>{totalPrice} $</span></h4>
+                            <h4><span>Total Price</span><span>{totalPrice.toFixed(2)} $</span></h4>
                             <button>Checkout</button>
                         </div>
                     </div>

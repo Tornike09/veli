@@ -1,0 +1,37 @@
+@import "../../colors/colors.scss";
+
+.filter {
+  width: 80%;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $borderColor;
+  h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    span {
+      font-weight: 400;
+    }
+  }
+  .inputsCont {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  input {
+    padding: 10px;
+    width: 100px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid $darkBorderColor;
+  }
+  input:focus {
+    border: 1px solid $primaryColor;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

@@ -24,6 +24,7 @@
       border-radius: 8px;
       display: flex;
       justify-content: space-between;
+      margin-top: 10px;
       > div {
         display: flex;
       }
@@ -70,6 +71,7 @@
   margin-top: 40px;
   border: 1px solid $borderColor;
   border-radius: 8px;
+  height: fit-content;
   > div > * {
     margin-top: 20px;
   }

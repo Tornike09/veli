@@ -1,0 +1,30 @@
+@import "../../colors/colors.scss";
+
+.filter {
+  width: 80%;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $borderColor;
+  h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    span {
+      font-weight: 400;
+    }
+  }
+  h4 {
+    font-weight: 400;
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    input {
+        accent-color: $primaryColor;
+        width: 16px;
+        height: 16px;
+    }
+  }
+  
+}

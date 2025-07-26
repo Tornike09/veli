@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image'
 import beauty from '../assets/img/სილამაზე_და_თავის_მოვლა_მეინი....webp'
 import fragrance from '../assets/img/Artboard_1_copy_6-04სუნამო.png'
 import furniture from '../assets/img/სახლი_და_ეზო__.webp'
@@ -23,6 +22,7 @@ import womensBags from '../assets/img/Group_მშჩანტა42702.png'
 import jewellery from '../assets/img/5ამკამურ.png'
 import womensShoes from '../assets/img/2ქალისსსს.png'
 import womensWatches from '../assets/img/Group_საათიო42703.png'
+import { StaticImageData } from 'next/image'
 
 
 export const categoryImages: Record<StaticImageData, string> = {
