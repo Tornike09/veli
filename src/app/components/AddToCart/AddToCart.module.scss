@@ -1,0 +1,14 @@
+@import "../../colors/colors.scss";
+
+.addToCart {
+  background-color: $primaryColor;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  width: 100%;
+}

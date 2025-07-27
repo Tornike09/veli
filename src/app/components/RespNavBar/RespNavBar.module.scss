@@ -1,0 +1,50 @@
+@import "../../colors/colors.scss";
+
+.respNavBar {
+  display: none;
+  width: 100vw;
+  height: 64px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  justify-content: space-around;
+  z-index: 99999;
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    color: $whiteColor;
+    font-size: 12px;
+    position: relative;
+    div {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $cartSizeColor;
+      position: absolute;
+      left: 15;
+      top: -5px;
+      color: $whiteColor;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.active {
+  svg {
+    color: $primaryColor !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .respNavBar {
+    display: flex;
+  }
+}

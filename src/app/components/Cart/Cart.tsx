@@ -23,18 +23,20 @@ export const Cart = () => {
                             cartItems.map((item) => <li key={item.id}>
                                 <div>
                                     <Image src={item.thumbnail} alt="" width={120} height={120} />
-                                    <h4>{item.title}</h4>
                                 </div>
-                                <div>
-                                    <div className={styles.qtyCont}>
-                                        <span onClick={() => dispatch(decreaseQty(item.id))}>-</span>
-                                        <p>{item.qty}</p>
-                                        <span onClick={() => dispatch(increaseQty(item.id))}>+</span>
+                                <div className={styles.descriptionCont}>
+                                    <div>
+                                        <h4>{item.title}</h4>
+                                        <div className={styles.qtyCont}>
+                                            <span onClick={() => dispatch(decreaseQty(item.id))}>-</span>
+                                            <p>{item.qty}</p>
+                                            <span onClick={() => dispatch(increaseQty(item.id))}>+</span>
+                                        </div>
+                                        <h5>{item.price}$</h5>
                                     </div>
-                                    <h5>{item.price}$</h5>
-                                </div>
-                                <div onClick={() => dispatch(removeFromCart(item.id))}>
-                                    <TrashIcon />
+                                    <div onClick={() => dispatch(removeFromCart(item.id))}>
+                                        <TrashIcon />
+                                    </div>
                                 </div>
                             </li>)
                         }

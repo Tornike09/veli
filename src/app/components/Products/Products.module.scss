@@ -2,9 +2,27 @@
 
 .productsCont {
   width: 100%;
+  margin-bottom: 100px;
   ul {
     display: flex;
     flex-wrap: wrap;
+    li {
+      flex: 1 1 calc(25% - 16px); /* 4 per row max with gap */
+      max-width: calc(25% - 16px);
+    }
   }
 }
 
+@media (max-width: 1024px) {
+  .productsCont li {
+    flex: 1 1 calc(33.33% - 16px) !important; /* 3 per row */
+    max-width: calc(33.33% - 16px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .productsCont li {
+    flex: 1 1 calc(50%) !important; /* 2 per row */
+    max-width: calc(50%) !important;
+  }
+}

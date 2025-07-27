@@ -3,10 +3,7 @@ import styles from './DetailedProduuct.module.scss'
 import Image from "next/image"
 import { useState } from "react"
 import ImageZoom from "../ImageZoom/ImageZoom"
-import { CartIcon } from "@/app/icons/CartIcon"
-import { addToCart } from "@/app/redux/slices/cartslice/cartSlice"
-import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "@/app/redux/store"
+import { AddToCart } from "../AddToCart/AddToCart"
 
 interface IDetailedProductProps {
     product: IProduct
@@ -14,18 +11,10 @@ interface IDetailedProductProps {
 
 export const DetailedProduct: React.FC<IDetailedProductProps> = ({ product }) => {
     const [imageIndex, setImageIndex] = useState<number>(0)
-    const cartItems = useSelector((state: RootState) => state.cart)
-    const dispatch = useDispatch()
 
     const getImageIndex = (index: number) => {
         setImageIndex(index)
     }
-
-    const addProductToCart = (product: IProduct) => {
-        dispatch(addToCart(product))
-    }
-
-    const alreadyInCart = cartItems.find((item) => item.id === product.id)
 
     return (
         <div className={styles.wrapper}>
@@ -74,8 +63,7 @@ export const DetailedProduct: React.FC<IDetailedProductProps> = ({ product }) =>
                                 </p>
                             </div>
                             <div className={styles.buttons}>
-                                <button className={styles.addToCart} onClick={() => addProductToCart(product)}>{alreadyInCart ? 'Already In Cart' : <>
-                                    <CartIcon />{'Add To Cart'}</>}</button>
+                                <AddToCart product={product} padding={'18px'}/>
                                 <button className={styles.buy}>Buy</button>
                                 <button className={styles.installment}>Installment</button>
                             </div>

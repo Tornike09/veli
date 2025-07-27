@@ -4,6 +4,7 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
   > div {
     max-width: 1100px;
     width: 90%;
@@ -110,10 +111,6 @@
   }
 }
 
-.addToCart {
-  background-color: $primaryColor;
-}
-
 .buy {
   background-color: $blackColor;
   color: $whiteColor;
@@ -121,4 +118,32 @@
 
 .installment {
   background-color: $installmentColor;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .priceCont {
+    width: 100%;
+  }
+
+  .imagesCont {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .descriptionCont {
+    width: 100%;
+  }
+
+  .imagesCont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }

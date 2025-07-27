@@ -5,6 +5,7 @@ import axios from 'axios'
 import Link from 'next/link';
 import Image from 'next/image';
 import { categoryImages } from '@/app/datas/categoryImages';
+import fallBackImage from '../../assets/img/default-fallback-image.png'
 
 interface ICategory {
     slug: string;
@@ -37,16 +38,13 @@ export const Categories = () => {
     return (
         <div className={styles.wrapper}>
             <div>
-                <div>
-
-                </div>
                 <ul>
                     {
                         categories.map((category, index) => <li key={index}>
                             <Link href={`/category/${category.slug}`}>
                                 <div>
                                     <p>{category.name}</p>
-                                    <Image src={getImage(category.slug)} alt='' width={100} height={100} />
+                                    <Image src={getImage(category.slug) || fallBackImage} alt='' width={100} height={100} />
                                 </div>
                             </Link>
                         </li>)

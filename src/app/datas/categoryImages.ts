@@ -25,7 +25,7 @@ import womensWatches from '../assets/img/Group_საათიო42703.png'
 import { StaticImageData } from 'next/image'
 
 
-export const categoryImages: Record<StaticImageData, string> = {
+export const categoryImages: Record<string, StaticImageData> = {
     'beauty': beauty,
     'fragrances': fragrance,
     'furniture': furniture,

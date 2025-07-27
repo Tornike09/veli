@@ -39,9 +39,6 @@ const ProductsBySlug = () => {
         getProducts()
     }, [getProducts])
 
-    console.log(minPrice, maxPrice);
-    
-
     return (
         <div>
             <Advertisment />

@@ -1,14 +1,15 @@
-@import '../../colors/colors.scss';
+@import "../../colors/colors.scss";
 
 .wrapper {
-    background-color: $blackColor;
-    height: 36px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p {
-        color: $whiteColor;
-        font-size: 12px;
-    }
+  background-color: $blackColor;
+  height: 36px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: $whiteColor;
+    font-size: 12px;
+    text-align: center;
+  }
 }
