@@ -25,7 +25,7 @@ export const FilterBrand: React.FC<IFilterBrandProps> = ({ products, setBrand, b
     }, [products])
 
     console.log(brands);
-    
+
 
     const handleBrand = (index: number, brandTitle: string) => {
         if (brand) {
@@ -38,27 +38,31 @@ export const FilterBrand: React.FC<IFilterBrandProps> = ({ products, setBrand, b
     }
 
     return (
-        <div className={styles.filter}>
-            <div>
-                <h3 onClick={toggleFilter}>
-                    <span>Brand</span>
-                    {isOpen ? <ArrowUp /> : <ArrowDown />}
-                </h3>
-                {isOpen && <div className={styles.brandsCont}>
-                    <ul>
-                        {
-                            brands.map((brand, index) => <li onClick={() => handleBrand(index, brand)} key={index}>
-                                <h4>
-                                    <input type='checkbox'
-                                        onChange={() => handleBrand(index, brand)}
-                                        checked={idx === index} />
-                                    <span>{brand}</span>
-                                </h4>
-                            </li>)
-                        }
-                    </ul>
-                </div>}
-            </div>
-        </div>
+        <>
+            {
+                brands.length > 1 && <div className={styles.filter}>
+                    <div>
+                        <h3 onClick={toggleFilter}>
+                            <span>Brand</span>
+                            {isOpen ? <ArrowUp /> : <ArrowDown />}
+                        </h3>
+                        {isOpen && <div className={styles.brandsCont}>
+                            <ul>
+                                {
+                                    brands.map((brand, index) => <li onClick={() => handleBrand(index, brand)} key={index}>
+                                        <h4>
+                                            <input type='checkbox'
+                                                onChange={() => handleBrand(index, brand)}
+                                                checked={idx === index} />
+                                            <span>{brand}</span>
+                                        </h4>
+                                    </li>)
+                                }
+                            </ul>
+                        </div>}
+                    </div>
+                </div>
+            }
+        </>
     )
 }
