@@ -1,0 +1,74 @@
+@import "../../colors/colors.scss";
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blurCont {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.mainCont {
+  max-width: 524px;
+  width: 90%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  border-radius: 14px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.mainCont > div {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > h4 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  }
+
+  .chooseType {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+    > div {
+        border-bottom: 2px solid $grayColor;
+        color: $grayColor;
+        width: 45%;
+        text-align: center;
+        padding-bottom: 6px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+  }
+
+  .content {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .active {
+    border-bottom: 2px solid $blackColor !important;
+    color: $blackColor !important;
+  }
+  
+

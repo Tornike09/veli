@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   border-radius: 8px;
-  width: 90%;
+  width: 100%;
   svg {
     margin: 0 14px;
     cursor: pointer;
@@ -41,23 +41,30 @@
 }
 
 .navCont {
-  width: 250px;
   justify-content: space-between;
   display: flex;
-  a{
+  width: fit-content;
+  flex: 1 auto;
+  a, h4 {
     display: flex;
+    font-weight: 400;
     gap: 10px;
     margin-left: 24px;
+    white-space: nowrap;
     cursor: pointer;
     position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+    border: 1px solid $primaryColor;
     div {
       width: 10px;
       height: 10px;
       border-radius: 50%;
       background-color: $cartSizeColor;
       position: absolute;
-      left: 10;
-      top: -5px;
+      left: 20;
+      top: 1px;
       color: $whiteColor;
       font-size: 10px;
       display: flex;
@@ -65,6 +72,11 @@
       align-items: center;
       }
   }
+}
+
+.navCont a:hover,
+.navCont h4:hover {
+  border: 1px solid $whiteColor;
 }
 
 .veliRespIcon {

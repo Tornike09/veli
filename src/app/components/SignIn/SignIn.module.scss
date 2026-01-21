@@ -1,0 +1,105 @@
+@import '../../colors/colors.scss';
+
+.signinCont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .input {
+        width: 100%;
+        font-size: 16px;
+        border-radius: 8px;
+        outline: none;
+        border: 1px solid $grayColor;
+        display: flex;
+        align-items: center;
+        svg {
+            margin-right: 12px;
+            cursor: pointer;
+        }
+        input {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+        }
+    }
+    p {
+        font-size: 12px;
+        font-weight: 600;
+        color: $primaryDarkColor;
+        cursor: pointer;
+    }
+    button {
+        background-color: $blackColor;
+        border-radius: 8px;
+        color: $whiteColor;
+        padding: 20px 0;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 8px;
+    }
+    h6 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.error {
+    width: 100%;
+    background-color: $lightErrorColor;
+    border: 1px solid $errorColor;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 12px 0;
+    h4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 12px;
+        gap: 12px;
+    }
+}
+
+.or {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 12px 0;
+    > div {
+        width: 45%;
+        height: 1px;
+        background-color: $grayColor;
+    }
+    span {
+        color: $grayColor;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    > div {
+        width: 48%;
+        border: 1px solid $grayColor;
+        padding: 16px 12px;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        cursor: pointer;
+        transition: 0.2ws;
+    }
+    > div:hover {
+        border: 1px solid $primaryColor;
+    }
+}

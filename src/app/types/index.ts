@@ -19,3 +19,14 @@ export interface IProduct {
     shippingInformation: string,
     discountPercentage: number
 }
+
+export interface IUser {
+    email: string
+    userName: string
+    password: string
+}
+
+export interface IError {
+    type: string
+    message: string
+}
